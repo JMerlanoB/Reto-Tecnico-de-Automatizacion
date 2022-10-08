@@ -15,12 +15,12 @@ public class RegisterUser implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
         Click.on(HomePage.REGISTER),
-                SendKeys.of("julio").into(Personal.FIRSTNAME),
-                SendKeys.of("merlano").into(Personal.LASTNAME),
-                SendKeys.of("julio.merlano.11@gmail.com").into(Personal.EMAIL),
+                SendKeys.of("Jonh").into(Personal.FIRSTNAME),
+                SendKeys.of("Doe").into(Personal.LASTNAME),
+                SendKeys.of("example@mail.com").into(Personal.EMAIL),
                 SendKeys.of("March").into(Personal.BIRTHMONTH),
-                SendKeys.of("11").into(Personal.BIRTHDAY),
-                SendKeys.of("1995").into(Personal.BIRTHYEAR),
+                SendKeys.of("15").into(Personal.BIRTHDAY),
+                SendKeys.of("1999").into(Personal.BIRTHYEAR),
                 Click.on(Personal.BTN_NEXTLOCATION),
 
                 // Pagina de Address
