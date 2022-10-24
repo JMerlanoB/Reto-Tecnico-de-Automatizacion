@@ -1,5 +1,6 @@
 package co.com.choucair.certifications.reto_tecnico_automatizacion.userinterface;
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.screenplay.targets.Target;
 
 public class Personal {
@@ -27,6 +28,11 @@ public class Personal {
     // Selecciona el Campo Año de Nacimiento
     public static final Target BIRTHYEAR = Target.the("birthYear").
             locatedBy("//select[@id=\"birthYear\"]");
+
+    // Selecciona el campo de idiomas
+    public static final Target LANGUAGE = Target.the("language").
+            located(By.xpath(("//INPUT[@type='search']")));
+
 
     // Selecciona el Boton Next Location
     public static final Target BTN_NEXTLOCATION = Target.the("btn_next_location").

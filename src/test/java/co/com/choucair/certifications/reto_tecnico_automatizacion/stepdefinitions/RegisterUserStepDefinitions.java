@@ -16,7 +16,7 @@ public class RegisterUserStepDefinitions {
    @Managed(driver = "chrome")
     private WebDriver myBrowser;
     private final Actor actor =  Actor.named("Tester");
-    private final HomePage homePage = new HomePage(); // Instanciamos la clse HomePage quien tiene la Url de la pagina
+    private final HomePage homePage = new HomePage(); // Instanciamos la clAse HomePage quien tiene la Url de la pagina
 
 
     @Given("^the user enters the main page and clicks the Join today button$")
@@ -29,7 +29,7 @@ public class RegisterUserStepDefinitions {
         actor.attemptsTo(RegisterUser.makesInformation());
     }
 
-    @Then("^The user sees theirs username$")
+    @Then("^The user will see a successful registration message$")
     public void theUserSeesTheirsUsername() {
 
     }

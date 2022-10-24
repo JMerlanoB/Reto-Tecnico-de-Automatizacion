@@ -12,6 +12,4 @@ public class HomePage extends PageObject {
     public static final Target REGISTER = Target.the("register").
             locatedBy("//a[@class=\"unauthenticated-nav-bar__sign-up\"]");
 
-    //a[@class="unauthenticated-nav-bar__sign-up"]
-
 }

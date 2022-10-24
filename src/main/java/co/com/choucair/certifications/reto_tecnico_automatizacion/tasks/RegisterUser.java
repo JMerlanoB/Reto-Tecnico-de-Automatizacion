@@ -3,16 +3,18 @@ package co.com.choucair.certifications.reto_tecnico_automatizacion.tasks;
 import co.com.choucair.certifications.reto_tecnico_automatizacion.userinterface.*;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Hit;
-import net.serenitybdd.screenplay.actions.SendKeys;
+import net.serenitybdd.screenplay.actions.*;
 import org.openqa.selenium.Keys;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
+
+
 public class RegisterUser implements Task {
+    // Acciones
     @Override
     public <T extends Actor> void performAs(T actor) {
+        // Tereas a realizar por el actor
         actor.attemptsTo(
         Click.on(HomePage.REGISTER),
                 SendKeys.of("Jonh").into(Personal.FIRSTNAME),
@@ -21,6 +23,8 @@ public class RegisterUser implements Task {
                 SendKeys.of("March").into(Personal.BIRTHMONTH),
                 SendKeys.of("15").into(Personal.BIRTHDAY),
                 SendKeys.of("1999").into(Personal.BIRTHYEAR),
+                Click.on(Personal.LANGUAGE),
+                Enter.theValue("Spanish").into(Personal.LANGUAGE).thenHit(Keys.ENTER),
                 Click.on(Personal.BTN_NEXTLOCATION),
 
                 // Pagina de Address
